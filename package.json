@@ -10,13 +10,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.11.18"
-  },
-  "dependencies": {
+    "mongoose": "^5.11.18",
     "path": "^0.12.7"
   },
   "engines": {
