@@ -6,9 +6,10 @@ class Model {
         this.selectedMovie = null;
         this.movies = [];
         this.api = MovieAPI;
+        this.url = 'https://movie-watcher-project.herokuapp.com'
     }
     getMovies = async() => {
-       let movies = await MovieAPI.getData('http://localhost:5000/api/movie');
+       let movies = await MovieAPI.getData(`${this.url}/api/movie`);
        this.movies.push(movies);
        return movies;
     }
@@ -30,7 +31,7 @@ class Model {
                     backdrop_path:backdrop_path,
                     favourite:true
                 }
-            let newMovie = await axios.post('http://localhost:5000/api/movie',movieData);
+            let newMovie = await axios.post(`${this.url}/api/movie`,movieData);
                 console.log(newMovie);
             }
         }

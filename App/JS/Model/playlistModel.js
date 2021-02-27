@@ -2,7 +2,7 @@ import {MovieAPI} from '../API/Api.js';
 
 class PlaylistModel {
     constructor() {
-        this.url = 'http://localhost:5000/api/playlist'
+        this.url = `https://movie-watcher-project.herokuapp.com/api/playlist`
     }
     getPlaylists = async() => {
         let playlists = await axios.get(this.url);
